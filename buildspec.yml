@@ -3,6 +3,7 @@ phases:
   install:
     runtime-versions:
       java: corretto8
+      #java: jdk-8
   pre_build:
     commands:
       #- cd src/main/resources/static
@@ -13,6 +14,7 @@ phases:
       - cd $CODEBUILD_SRC_DIR
       - pwd
       - ls -lrta
+      #- cd $CODEBUILD_SRC_DIR
   build:
     commands:
       - echo Build started on `date`
@@ -22,8 +24,11 @@ phases:
       - pwd
       - ls -lrta
       #- mvn package
-      mvn clean
+      - mvn clean
 artifacts:
   files:
-    - target/softobiz-1.0.0.war
+    #- target/softobiz-1.0.0.war
+      - '**/*'
+    #- softobiz-1.0.0.war
+    
   
