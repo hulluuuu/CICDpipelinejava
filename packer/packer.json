@@ -3,11 +3,10 @@
         "packer_profile": "ec2-s3-packer",
         "applicaiton_name": "softobiz",
         "application_version": "1.0.0",
-        "region": "us-east-1",
+        "region": "ap-south-1",
         "instance_type": "t2.micro",
-        "source_ami": "ami-04505e74c0741db8d",
-        "ami_aws_account_id": "496828030722",
-        "iam_profile": "ec2-packer"
+        "source_ami": "ami-0851b76e8b1bce90b",
+        "ami_aws_account_id": "496828030722"
 
     },
     "builders": [
@@ -44,11 +43,8 @@
         {
             "type": "shell",
             "inline": [
-                "cd /opt/",
-                "git clone https://github.com/keshavkummari/keshavkummari.git",
-                "cd /opt/keshavkummari/",
-                "cp -pvr /opt/keshavkummari/ /var/www/html/"
-
+                "pwd",
+                "git clone https://github.com/hulluuuu/CICDpipelinejava.git"
             ]
         }
 
